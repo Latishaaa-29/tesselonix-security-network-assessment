@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "tracked_files_checked": 126,
+  "tracked_files_checked": 129,
   "generated_local_credentials_found": 0,
   "obvious_private_key_or_access_token_formats_found": 0,
   "application_patch_reverse_check": "PASS",

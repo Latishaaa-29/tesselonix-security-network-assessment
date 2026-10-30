@@ -25,7 +25,8 @@ for name in filter(None, files):
     if name == '.env' or name.startswith('.build/'):
         issues.append(name + ': private runtime file is tracked')
 assert not issues, '\n'.join(issues)
-subprocess.run(['git', 'diff', '--check', 'HEAD'], cwd=root, check=True)
+# Tool transcripts intentionally preserve column padding and blank lines.
+subprocess.run(['git', 'diff', '--check', 'HEAD', '--', '.', ':(exclude)evidence/**'], cwd=root, check=True)
 subprocess.run(['git', 'apply', '--reverse', '--check', 'fixes/security-hardening.diff'], cwd=root, check=True)
 summary = {'result': 'PASS', 'tracked_files_checked': len(list(filter(None, files))),
            'generated_local_credentials_found': 0,
