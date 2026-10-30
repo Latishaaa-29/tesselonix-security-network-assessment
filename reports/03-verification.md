@@ -71,3 +71,17 @@ This establishes the tested outcomes on this Docker Desktop environment. It does
 not establish comprehensive app security, production TLS, exhaustive firewall
 coverage, resistance to a Docker administrator or candidate understanding.
 The candidate must rehearse the walkthrough before submission.
+
+Browser verification (`evidence/app/browser_smoke.txt`) additionally exercised a
+real CSRF-protected login, remember cookie flags, post creation, persisted-post
+display on Explore, and redirecting an unauthenticated session. Three actual
+screenshots are under `evidence/screenshots/`.
+The browser smoke runner also verifies token issuance, bearer-authenticated API
+user listing (200), and rejection of the same API read without a token (401).
+
+Clean-clone reproduction is recorded in `evidence/clean_clone.txt` and the actual
+image-build output in `evidence/clean_build.txt`. The full verifier was repeated
+from commit `9311b29` with fresh random credentials and separate project volumes;
+the final hardened app source is unchanged from that commit. Later changes add
+documentation, optional browser/API assertions, evidence serialization and package
+checks. `evidence/source-provenance.txt` records the byte-for-byte upstream match.

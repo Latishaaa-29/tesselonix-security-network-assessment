@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "tracked_files_checked": 126,
+  "generated_local_credentials_found": 0,
+  "obvious_private_key_or_access_token_formats_found": 0,
+  "application_patch_reverse_check": "PASS",
+  "limitations": "Focused format/known-value check, not an exhaustive secret scanner."
+}

@@ -4,6 +4,14 @@ Reproducible local assessment of **Microblog**, with vulnerable and hardened ima
 two verified source findings, an isolated PostgreSQL network lab, regression tests,
 raw evidence and submission reports. AI assistance is disclosed in [TOOLS_AND_AI.md](TOOLS_AND_AI.md).
 
+Verified results: **4 upstream tests pass on baseline; 15 tests pass on hardened**.
+Live HTTP/JWT proofs, TCP/UDP captures, access checks after recreation, and a
+Chromium login/posting smoke test are included under `evidence/`.
+The full verifier also passed from a clean clone with new credentials and separate
+volumes; see `evidence/clean_clone.txt`. Browser checks include protected bearer API reads.
+
+![Authenticated application with a persisted lab post](evidence/screenshots/02-authenticated-post.png)
+
 **Target:** https://github.com/miguelgrinberg/microblog  
 **Exact upstream commit:** `a975ef64864354867c88e0ed3a17ba7d17dca752`  
 **Upstream license:** MIT; retained at `app/microblog/LICENSE`.

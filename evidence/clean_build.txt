@@ -1,0 +1,183 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 393B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 2.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 141B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+#5 resolve docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 0.0s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 107.79kB 0.2s done
+#4 DONE 0.3s
+
+#6 [2/7] WORKDIR /srv/microblog
+#6 CACHED
+
+#7 [3/7] COPY app/microblog/requirements.txt .
+#7 CACHED
+
+#8 [4/7] RUN pip install --no-cache-dir -r requirements.txt pytest==8.3.5
+#8 CACHED
+
+#9 [5/7] COPY app/microblog/ .
+#9 DONE 0.1s
+
+#10 [6/7] COPY lab/app/entrypoint.sh /entrypoint.sh
+#10 DONE 0.1s
+
+#11 [7/7] RUN chmod +x /entrypoint.sh
+#11 DONE 0.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 exporting manifest sha256:b701e65718833ec51284850a3472613d7eab4c31de83cecf7160a55b6cfd42b2 0.0s done
+#12 exporting config sha256:5db183cc7e14bd1b6efe73fb0fb046aa36b0380efe638efb21b41400868f7898 0.0s done
+#12 exporting attestation manifest sha256:d430abbe31617094147bc4a2b6ff11e886164efa4a11bd036967069d14abb0ff 0.1s done
+#12 exporting manifest list sha256:8b32d1c82d24e405629d55334495b9960ae85353cf48dc4923a1f25da7f363bb
+#12 exporting manifest list sha256:8b32d1c82d24e405629d55334495b9960ae85353cf48dc4923a1f25da7f363bb 0.0s done
+#12 naming to docker.io/library/tx-microblog:baseline done
+#12 unpacking to docker.io/library/tx-microblog:baseline
+#12 unpacking to docker.io/library/tx-microblog:baseline 0.2s done
+#12 DONE 0.7s
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 393B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 141B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+#5 resolve docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+#5 resolve docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 112.21kB 0.1s done
+#4 DONE 0.2s
+
+#6 [2/7] WORKDIR /srv/microblog
+#6 CACHED
+
+#7 [3/7] COPY app/microblog/requirements.txt .
+#7 CACHED
+
+#8 [4/7] RUN pip install --no-cache-dir -r requirements.txt pytest==8.3.5
+#8 CACHED
+
+#9 [5/7] COPY app/microblog/ .
+#9 DONE 0.1s
+
+#10 [6/7] COPY lab/app/entrypoint.sh /entrypoint.sh
+#10 DONE 0.1s
+
+#11 [7/7] RUN chmod +x /entrypoint.sh
+#11 DONE 0.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 exporting manifest sha256:790949e2439d1874273392cdf9ebcded6ebbe421116f766844f548a0926d5083 0.0s done
+#12 exporting config sha256:5ec0129eb4786d98dbaec0099e8b1464397741e68ab21691dbe7bc7bf4495990 0.0s done
+#12 exporting attestation manifest sha256:517af2c7a013d1416ea0b03028b9336e7fbfa5e4e32e1da17e37c30c946b8c75
+#12 exporting attestation manifest sha256:517af2c7a013d1416ea0b03028b9336e7fbfa5e4e32e1da17e37c30c946b8c75 0.1s done
+#12 exporting manifest list sha256:c20f5c28409641c4bd4a6b44e77e291a0d554f8c3abbf2ba5d440efa5b898205 0.0s done
+#12 naming to docker.io/library/tx-microblog:fixed done
+#12 unpacking to docker.io/library/tx-microblog:fixed
+#12 unpacking to docker.io/library/tx-microblog:fixed 0.2s done
+#12 DONE 0.8s
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 327B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/postgres:16-bookworm
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 141B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/postgres:16-bookworm@sha256:e8a07d2c7579b038938cdba6c539e580e5001caf9ea203d397b5cc83e76bd938
+#5 resolve docker.io/library/postgres:16-bookworm@sha256:e8a07d2c7579b038938cdba6c539e580e5001caf9ea203d397b5cc83e76bd938 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 632B 0.0s done
+#4 DONE 0.0s
+
+#6 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends iptables socat iproute2 tcpdump && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [3/4] COPY lab/db/fw-entrypoint.sh /fw-entrypoint.sh
+#7 CACHED
+
+#8 [4/4] RUN chmod +x /fw-entrypoint.sh
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers 0.0s done
+#9 exporting manifest sha256:116a3f5761dfb3370423cde80cef761b72855f27bbc0040659dc5266e729ec25 done
+#9 exporting config sha256:a770390ac5157800ecbf7224a73606bacd89fddbc970702744fadc56ed3a3686 done
+#9 exporting attestation manifest sha256:baa39aa0586c242ce1e54bf73bf36e0a349888f247cf8ae4eac9d64ccd2141a2
+#9 exporting attestation manifest sha256:baa39aa0586c242ce1e54bf73bf36e0a349888f247cf8ae4eac9d64ccd2141a2 0.1s done
+#9 exporting manifest list sha256:019aacd4ace332a3512389cdd4f61bcc081945696ceebcd5c5fee2af5a8a18bd 0.0s done
+#9 naming to docker.io/library/tx-db:lab done
+#9 unpacking to docker.io/library/tx-db:lab 0.0s done
+#9 DONE 0.2s
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 281B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 1.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 141B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM docker.io/library/debian:bookworm-slim@sha256:99c0b25c46d0214d5a2091092e7908907dcaecd6a962cde0ac700acee222b6f3
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:99c0b25c46d0214d5a2091092e7908907dcaecd6a962cde0ac700acee222b6f3 0.0s done
+#4 DONE 0.1s
+
+#5 [2/2] RUN apt-get update && apt-get install -y --no-install-recommends nmap tcpdump postgresql-client netcat-openbsd socat iproute2 curl iptables ca-certificates && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:89ff2d56382db8918a3033025a8e82b6dbbfb0396efa2f1c24ffb81702fd720f done
+#6 exporting config sha256:4c6a36bf6a9dc9b2b76cd0a3f73c3e8345e10b78ee60fb3a1a66eef0a8d7f98d done
+#6 exporting attestation manifest sha256:610634a4497185c7074773cc2215032c42ebdcffdd73b3b148927eee209b1ebb 0.1s done
+#6 exporting manifest list sha256:6273897a9c08f6303e262836fca0706f4b3f3fadac65424c8a0681c17c10cbc1 0.0s done
+#6 naming to docker.io/library/tx-tools:lab
+#6 naming to docker.io/library/tx-tools:lab done
+#6 unpacking to docker.io/library/tx-tools:lab 0.0s done
+#6 DONE 0.2s

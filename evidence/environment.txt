@@ -1,0 +1,13 @@
+Runtime versions
+python --version
+Python 3.11.0
+
+git --version
+git version 2.48.1.windows.1
+
+docker version --format Client={{.Client.Version}} Server={{.Server.Version}}
+Client=28.3.2 Server=28.3.2
+
+docker compose version
+Docker Compose version v2.38.2-desktop.1
+

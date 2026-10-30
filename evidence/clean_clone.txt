@@ -1,0 +1,4 @@
+PASS: built all four images from a clean Git clone.
+PASS: scripts/verify.py completed all phases using newly generated secrets and separate tx-review-app / tx-review-net volumes.
+Source commit exercised: 9311b29 (same final hardened application source).
+Later changes: documentation, optional browser/API smoke assertions, evidence JSON formatting, submission checks.

@@ -1,5 +1,6 @@
 """Optional UI smoke test. Requires host playwright and its Chromium browser."""
 from pathlib import Path
+import base64
 import json
 import time
 from playwright.sync_api import sync_playwright
@@ -32,6 +33,14 @@ with sync_playwright() as playwright:
     cookies = page.context.cookies()
     assert all(c['secure'] and c['httpOnly'] and c['sameSite'] == 'Lax'
                for c in cookies if c['name'] in ('session', 'remember_token'))
+    auth = base64.b64encode(('audit:' + password).encode()).decode()
+    issued = page.request.post('http://localhost:5000/api/tokens',
+                               headers={'Authorization': 'Basic ' + auth})
+    assert issued.status == 200
+    bearer = issued.json()['token']
+    assert page.request.get('http://localhost:5000/api/users',
+        headers={'Authorization': 'Bearer ' + bearer}).status == 200
+    assert page.request.get('http://localhost:5000/api/users').status == 401
     # A second context with no cookies must be redirected to login.
     other = browser.new_context()
     unauthenticated = other.new_page()
@@ -41,6 +50,7 @@ with sync_playwright() as playwright:
         'Chromium browser smoke test: PASS\n'
         'Login with real CSRF form: PASS\nRemember cookie and session flags: PASS\n'
         'Authenticated create post: PASS\nExplore reads persisted post: PASS\n'
+        'Bearer-authenticated API user list: PASS\nAPI user list without token returns 401: PASS\n'
         'Unauthenticated index redirects to login: PASS\n'
         'Credentials/cookie values withheld. Screenshots contain disposable lab data only.\n', encoding='utf-8')
     browser.close()

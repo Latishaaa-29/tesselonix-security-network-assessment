@@ -38,6 +38,10 @@ IPv6 application-network addressing is not enabled. The host publishes only
 container is not the host's publication address. UDP port 5353 is a synthetic
 unicast echo service here, **not an implementation of mDNS**.
 
+The port-only nmap scan labels TCP 5000 `upnp` using its port-name database;
+that is not a service fingerprint. The configured Gunicorn listener and real HTTP
+responses establish that this lab's service is Flask HTTP, not UPnP.
+
 | Source → destination | app TCP 5000 | db TCP 5432 | db UDP 5353 |
 |---|---|---|---|
 | client edge | Allow | Deny | Deny |

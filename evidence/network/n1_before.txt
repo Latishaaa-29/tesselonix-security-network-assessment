@@ -1,4 +1,4 @@
-Captured UTC: 2026-10-30T04:28:37.737480+00:00
+Captured UTC: 2026-10-30T04:35:44.490464+00:00
 Controlled, deliberately introduced local DB exposure
 Host 127.0.0.1:15432 TCP connected
 $ rogue: nc -zv -w 3 172.28.20.10 5432

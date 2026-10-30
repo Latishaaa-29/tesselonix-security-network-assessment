@@ -1,4 +1,4 @@
-Captured UTC: 2026-10-30T04:25:12.154112+00:00
+Captured UTC: 2026-10-30T04:35:16.354660+00:00
 POST /api/tokens using HTTP Basic; same peer, sequential requests
 Valid credential first: 200
 Wrong passwords: [401, 401, 401, 401, 401, 401, 401, 401, 401, 429, 429, 429, 429, 429, 429, 429, 429, 429, 429, 429]

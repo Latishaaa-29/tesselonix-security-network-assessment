@@ -1,6 +1,8 @@
-Captured UTC: 2026-10-30T04:29:55.580617+00:00
 {
-  "phase": "network",
+  "phase": "all",
   "result": "PASS",
-  "application_left_running": true
+  "application_left_running": true,
+  "captured_utc": "2026-10-30T04:36:59.215960+00:00",
+  "clean_clone_verified": true,
+  "source_commit_exercised": "9311b29"
 }

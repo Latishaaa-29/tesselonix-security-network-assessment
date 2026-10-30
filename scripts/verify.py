@@ -38,8 +38,14 @@ def redact(text):
 def save(name, text):
     target = ROOT / 'evidence' / name
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text('Captured UTC: ' + datetime.now(timezone.utc).isoformat() + '\n' +
-                      redact(text) + '\n', encoding='utf-8')
+    captured = datetime.now(timezone.utc).isoformat()
+    if target.suffix == '.json':
+        payload = json.loads(redact(text))
+        payload['captured_utc'] = captured
+        target.write_text(json.dumps(payload, indent=2) + '\n', encoding='utf-8')
+    else:
+        target.write_text('Captured UTC: ' + captured + '\n' +
+                          redact(text) + '\n', encoding='utf-8')
     print('Saved', name, flush=True)
 
 

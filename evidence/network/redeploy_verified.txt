@@ -1,4 +1,4 @@
-Captured UTC: 2026-10-30T04:29:55.576295+00:00
+Captured UTC: 2026-10-30T04:36:59.211268+00:00
 $ rogue: nc -zv -w 3 172.28.20.10 5432
 nc: connect to 172.28.20.10 port 5432 (tcp) timed out: Operation now in progress
 Exit: 1

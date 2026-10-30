@@ -1,8 +1,8 @@
-Captured UTC: 2026-10-30T04:29:26.141165+00:00
+Captured UTC: 2026-10-30T04:36:31.288404+00:00
 $ netops: nc -zv -w 3 172.28.20.10 5432
 Connection to 172.28.20.10 5432 port [tcp/postgresql] succeeded!
 Exit: 0
-[2026-10-30 04:29:10,153] INFO in __init__: Microblog startup
+[2026-10-30 04:36:15,867] INFO in __init__: Microblog startup
 Microblog startup
 App database query: 1
 $ netops: printf 'tx-udp-probe' | nc -u -w 2 172.28.20.10 5353
@@ -23,17 +23,17 @@ $ client: curl -s -o /dev/null -w "HTTP %{http_code}\n" http://172.28.10.10:5000
 HTTP 200
 Exit: 0
 $ netops: nmap -n -Pn -sT -p 5000 172.28.10.10; nmap -n -Pn -sT -p 5432 172.28.20.10
-Starting Nmap 7.93 ( https://nmap.org ) at 2026-10-30 04:29 UTC
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-10-30 04:36 UTC
 Nmap scan report for 172.28.10.10
-Host is up (0.00036s latency).
+Host is up (0.00034s latency).
 
 PORT     STATE SERVICE
 5000/tcp open  upnp
 
-Nmap done: 1 IP address (1 host up) scanned in 0.05 seconds
-Starting Nmap 7.93 ( https://nmap.org ) at 2026-10-30 04:29 UTC
+Nmap done: 1 IP address (1 host up) scanned in 0.04 seconds
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-10-30 04:36 UTC
 Nmap scan report for 172.28.20.10
-Host is up (0.00030s latency).
+Host is up (0.00066s latency).
 
 PORT     STATE SERVICE
 5432/tcp open  postgresql
