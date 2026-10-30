@@ -1,0 +1,6 @@
+Captured UTC: 2026-10-30T04:29:55.576295+00:00
+$ rogue: nc -zv -w 3 172.28.20.10 5432
+nc: connect to 172.28.20.10 port 5432 (tcp) timed out: Operation now in progress
+Exit: 1
+Host 127.0.0.1:15432 blocked: ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+Valid API authentication after recreation: 200

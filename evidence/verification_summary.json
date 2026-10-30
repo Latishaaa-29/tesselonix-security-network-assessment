@@ -1,0 +1,6 @@
+Captured UTC: 2026-10-30T04:29:55.580617+00:00
+{
+  "phase": "network",
+  "result": "PASS",
+  "application_left_running": true
+}

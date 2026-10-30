@@ -1,0 +1,7 @@
+Chromium browser smoke test: PASS
+Login with real CSRF form: PASS
+Remember cookie and session flags: PASS
+Authenticated create post: PASS
+Explore reads persisted post: PASS
+Unauthenticated index redirects to login: PASS
+Credentials/cookie values withheld. Screenshots contain disposable lab data only.

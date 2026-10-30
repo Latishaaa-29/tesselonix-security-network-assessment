@@ -1,0 +1,9 @@
+Captured UTC: 2026-10-30T04:24:07.702762+00:00
+[2026-10-30 04:24:07,211] INFO in __init__: Microblog startup
+Microblog startup
+Effective key equals public upstream default: True
+Forged reset JWT resolves to audit account: True
+Genuine reset JWT accepted: True
+Session cookie policy: {'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SAMESITE': None}
+Set-Cookie: session=[REDACTED]; HttpOnly; Path=/
+

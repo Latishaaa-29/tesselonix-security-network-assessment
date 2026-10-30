@@ -1,6 +1,9 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
+import secrets
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from flask import Flask, request, current_app
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -26,11 +29,21 @@ login.login_message = _l('Please log in to access this page.')
 mail = Mail()
 moment = Moment()
 babel = Babel()
+limiter = Limiter(key_func=get_remote_address)
 
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
+
+    key = app.config.get('SECRET_KEY')
+    if not key or key == 'you-will-never-guess' or len(key) < 32:
+        if app.testing or app.debug:
+            app.config['SECRET_KEY'] = secrets.token_hex(32)
+        else:
+            raise RuntimeError('SECRET_KEY must be a private random value of at least 32 characters')
+
+    limiter.init_app(app)
 
     db.init_app(app)
     migrate.init_app(app, db)

@@ -3,7 +3,7 @@ from urllib.parse import urlsplit
 from flask_login import login_user, logout_user, current_user
 from flask_babel import _
 import sqlalchemy as sa
-from app import db
+from app import db, limiter
 from app.auth import bp
 from app.auth.forms import LoginForm, RegistrationForm, \
     ResetPasswordRequestForm, ResetPasswordForm
@@ -12,6 +12,7 @@ from app.auth.email import send_password_reset_email
 
 
 @bp.route('/login', methods=['GET', 'POST'])
+@limiter.limit('10 per minute', methods=['POST'])
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
@@ -53,6 +54,7 @@ def register():
 
 
 @bp.route('/reset_password_request', methods=['GET', 'POST'])
+@limiter.limit('5 per minute', methods=['POST'])
 def reset_password_request():
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
@@ -70,6 +72,7 @@ def reset_password_request():
 
 
 @bp.route('/reset_password/<token>', methods=['GET', 'POST'])
+@limiter.limit('5 per minute', methods=['POST'])
 def reset_password(token):
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))

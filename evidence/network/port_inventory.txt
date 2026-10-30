@@ -1,0 +1,19 @@
+Captured UTC: 2026-10-30T04:29:06.414752+00:00
+$ db: ss -lntup; iptables -S INPUT
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                       
+udp   UNCONN 0      0         127.0.0.11:41375      0.0.0.0:*                                 
+udp   UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*    users:(("socat",pid=15,fd=5))
+tcp   LISTEN 0      200          0.0.0.0:5432       0.0.0.0:*                                 
+tcp   LISTEN 0      4096      127.0.0.11:38115      0.0.0.0:*                                 
+tcp   LISTEN 0      200             [::]:5432          [::]:*                                 
+-P INPUT DROP
+-A INPUT -i lo -j ACCEPT
+-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -s 172.28.20.11/32 -p tcp -m tcp --dport 5432 -j ACCEPT
+-A INPUT -s 172.28.20.60/32 -p tcp -m tcp --dport 5432 -j ACCEPT
+-A INPUT -s 172.28.20.60/32 -p udp -m udp --dport 5353 -j ACCEPT
+Exit: 0
+app published ports: {"5000/tcp":[{"HostIp":"127.0.0.1","HostPort":"5000"}]}
+db published ports: {}
+netops published ports: {}
+

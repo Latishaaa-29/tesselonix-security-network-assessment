@@ -1,0 +1,5 @@
+Captured UTC: 2026-10-30T04:25:22.402101+00:00
+Command: docker run --rm tx-microblog:fixed pytest -q tests.py test_security.py
+...............                                                          [100%]
+15 passed in 5.95s
+

@@ -1,0 +1,7 @@
+Captured UTC: 2026-10-30T04:28:37.737480+00:00
+Controlled, deliberately introduced local DB exposure
+Host 127.0.0.1:15432 TCP connected
+$ rogue: nc -zv -w 3 172.28.20.10 5432
+Connection to 172.28.20.10 5432 port [tcp/postgresql] succeeded!
+Exit: 0
+
