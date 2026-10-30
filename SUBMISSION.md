@@ -2,8 +2,10 @@
 
 Repository: https://github.com/Latishaaa-29/tesselonix-security-network-assessment
 
-Candidate: **Latisha Saxena**  
-Enrollment number: **02617711623**  
+Candidate: **Latisha Saxena**
+
+Enrollment number: **02617711623**
+
 Role: **Cybersecurity and Computer Networking**
 
 Ready-to-review deliverables:
