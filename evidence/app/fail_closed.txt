@@ -1,4 +1,4 @@
-Captured UTC: 2026-10-30T04:35:29.980517+00:00
+Captured UTC: 2026-10-30T07:47:54.978025+00:00
 Fresh container without SECRET_KEY; expected nonzero exit
 Traceback (most recent call last):
   File "<string>", line 1, in <module>

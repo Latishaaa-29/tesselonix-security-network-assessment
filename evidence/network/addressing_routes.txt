@@ -1,5 +1,5 @@
-Captured UTC: 2026-10-30T04:36:10.741674+00:00
-app hostname IPs: ('d5d81ec3d54b', [], ['172.28.10.10', '172.28.20.11'])
+Captured UTC: 2026-10-30T07:48:32.914901+00:00
+app hostname IPs: ('af3b1d493781', [], ['172.28.10.10', '172.28.20.11'])
 Iface	Destination	Gateway 	Flags	RefCnt	Use	Metric	Mask		MTU	Window	IRTT                                                       
 eth0	00000000	010A1CAC	0003	0	0	0	00000000	0	0	0                                                                               
 eth0	000A1CAC	00000000	0001	0	0	0	00FFFFFF	0	0	0                                                                               
@@ -9,29 +9,29 @@ ip_forward: 0
 
 $ db: ip -br address; ip route
 lo               UNKNOWN        127.0.0.1/8 ::1/128 
-eth0@if137       UP             172.28.20.10/24 
+eth0@if216       UP             172.28.20.10/24 
 172.28.20.0/24 dev eth0 proto kernel scope link src 172.28.20.10 
 Exit: 0
 
 $ netops: ip -br address; ip route
 lo               UNKNOWN        127.0.0.1/8 ::1/128 
-eth0@if136       UP             172.28.10.60/24 
-eth1@if139       UP             172.28.20.60/24 
-default via 172.28.10.1 dev eth0 
-172.28.10.0/24 dev eth0 proto kernel scope link src 172.28.10.60 
-172.28.20.0/24 dev eth1 proto kernel scope link src 172.28.20.60 
+eth0@if213       UP             172.28.20.60/24 
+eth1@if217       UP             172.28.10.60/24 
+default via 172.28.10.1 dev eth1 
+172.28.10.0/24 dev eth1 proto kernel scope link src 172.28.10.60 
+172.28.20.0/24 dev eth0 proto kernel scope link src 172.28.20.60 
 Exit: 0
 
 $ client: ip -br address; ip route
 lo               UNKNOWN        127.0.0.1/8 ::1/128 
-eth0@if138       UP             172.28.10.50/24 
+eth0@if214       UP             172.28.10.50/24 
 default via 172.28.10.1 dev eth0 
 172.28.10.0/24 dev eth0 proto kernel scope link src 172.28.10.50 
 Exit: 0
 
 $ rogue: ip -br address; ip route
 lo               UNKNOWN        127.0.0.1/8 ::1/128 
-eth0@if135       UP             172.28.20.99/24 
+eth0@if215       UP             172.28.20.99/24 
 172.28.20.0/24 dev eth0 proto kernel scope link src 172.28.20.99 
 Exit: 0
 

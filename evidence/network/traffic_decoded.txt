@@ -1,28 +1,30 @@
-Captured UTC: 2026-10-30T04:36:33.584633+00:00
+Captured UTC: 2026-10-30T07:48:56.292093+00:00
 $ db: tcpdump -nn -tttt -r /tmp/traffic.pcap
 reading from file /tmp/traffic.pcap, link-type LINUX_SLL2 (Linux cooked v2), snapshot length 128
 Warning: interface names might be incorrect
-2026-10-30 04:36:14.245073 eth0  In  IP 172.28.20.60.52562 > 172.28.20.10.5432: Flags [S], seq 4064509058, win 64240, options [mss 1460,sackOK,TS val 2124049680 ecr 0,nop,wscale 7], length 0
-2026-10-30 04:36:14.245140 eth0  Out IP 172.28.20.10.5432 > 172.28.20.60.52562: Flags [S.], seq 1952119400, ack 4064509059, win 65160, options [mss 1460,sackOK,TS val 244773046 ecr 2124049680,nop,wscale 7], length 0
-2026-10-30 04:36:14.245180 eth0  In  IP 172.28.20.60.52562 > 172.28.20.10.5432: Flags [.], ack 1, win 502, options [nop,nop,TS val 2124049680 ecr 244773046], length 0
-2026-10-30 04:36:14.245398 eth0  In  IP 172.28.20.60.52562 > 172.28.20.10.5432: Flags [F.], seq 1, ack 1, win 502, options [nop,nop,TS val 2124049680 ecr 244773046], length 0
-2026-10-30 04:36:14.246741 eth0  Out IP 172.28.20.10.5432 > 172.28.20.60.52562: Flags [.], ack 2, win 510, options [nop,nop,TS val 244773048 ecr 2124049680], length 0
-2026-10-30 04:36:14.251770 eth0  Out IP 172.28.20.10.5432 > 172.28.20.60.52562: Flags [F.], seq 1, ack 2, win 510, options [nop,nop,TS val 244773053 ecr 2124049680], length 0
-2026-10-30 04:36:14.251843 eth0  In  IP 172.28.20.60.52562 > 172.28.20.10.5432: Flags [.], ack 2, win 502, options [nop,nop,TS val 2124049687 ecr 244773053], length 0
-2026-10-30 04:36:15.869428 eth0  In  IP 172.28.20.11.40638 > 172.28.20.10.5432: Flags [S], seq 1821149354, win 64240, options [mss 1460,sackOK,TS val 1905425304 ecr 0,nop,wscale 7], length 0
-2026-10-30 04:36:15.869456 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.40638: Flags [S.], seq 1419509607, ack 1821149355, win 65160, options [mss 1460,sackOK,TS val 902000622 ecr 1905425304,nop,wscale 7], length 0
-2026-10-30 04:36:15.869489 eth0  In  IP 172.28.20.11.40638 > 172.28.20.10.5432: Flags [.], ack 1, win 502, options [nop,nop,TS val 1905425304 ecr 902000622], length 0
-2026-10-30 04:36:15.870024 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.40638: Flags [.], ack 9, win 509, options [nop,nop,TS val 902000623 ecr 1905425305], length 0
-2026-10-30 04:36:15.872045 eth0  In  IP 172.28.20.11.40638 > 172.28.20.10.5432: Flags [.], ack 2, win 502, options [nop,nop,TS val 1905425307 ecr 902000625], length 0
-2026-10-30 04:36:15.930798 eth0  In  IP 172.28.20.11.40638 > 172.28.20.10.5432: Flags [.], ack 1301, win 501, options [nop,nop,TS val 1905425366 ecr 902000641], length 0
-2026-10-30 04:36:16.048650 eth0  In  IP 172.28.20.11.40638 > 172.28.20.10.5432: Flags [F.], seq 568, ack 1301, win 501, options [nop,nop,TS val 1905425483 ecr 902000641], length 0
-2026-10-30 04:36:16.053299 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.40638: Flags [F.], seq 1301, ack 569, win 509, options [nop,nop,TS val 902000806 ecr 1905425483], length 0
-2026-10-30 04:36:16.053401 eth0  In  IP 172.28.20.11.40638 > 172.28.20.10.5432: Flags [.], ack 1302, win 501, options [nop,nop,TS val 1905425488 ecr 902000806], length 0
-2026-10-30 04:36:16.526818 eth0  In  IP 172.28.20.60.51377 > 172.28.20.10.5353: 29816 update+% [b2&3=0x2d75] [11632a] [25712q] [29295n] [25189au] [|domain]
-2026-10-30 04:36:16.530846 eth0  Out IP 172.28.20.10.5353 > 172.28.20.60.51377: 29816 update+% [b2&3=0x2d75] [11632a] [25712q] [29295n] [25189au] [|domain]
-2026-10-30 04:36:24.824665 eth0  In  IP 172.28.20.99.39846 > 172.28.20.10.5432: Flags [S], seq 1643578368, win 64240, options [mss 1460,sackOK,TS val 1506171053 ecr 0,nop,wscale 7], length 0
-2026-10-30 04:36:25.842912 eth0  In  IP 172.28.20.99.39846 > 172.28.20.10.5432: Flags [S], seq 1643578368, win 64240, options [mss 1460,sackOK,TS val 1506172072 ecr 0,nop,wscale 7], length 0
-2026-10-30 04:36:26.866807 eth0  In  IP 172.28.20.99.39846 > 172.28.20.10.5432: Flags [S], seq 1643578368, win 64240, options [mss 1460,sackOK,TS val 1506173096 ecr 0,nop,wscale 7], length 0
-2026-10-30 04:36:28.243402 eth0  In  IP 172.28.20.99.43041 > 172.28.20.10.5353: 25701 updateMA [b2&3=0x6e69] [11637a] [25956q] [25712n] [11632au] [|domain]
+2026-10-30 07:48:36.497553 eth0  In  IP 172.28.20.60.44104 > 172.28.20.10.5432: Flags [S], seq 1339964907, win 64240, options [mss 1460,sackOK,TS val 2135592835 ecr 0,nop,wscale 7], length 0
+2026-10-30 07:48:36.497587 eth0  Out IP 172.28.20.10.5432 > 172.28.20.60.44104: Flags [S.], seq 3143105319, ack 1339964908, win 65160, options [mss 1460,sackOK,TS val 256316202 ecr 2135592835,nop,wscale 7], length 0
+2026-10-30 07:48:36.497626 eth0  In  IP 172.28.20.60.44104 > 172.28.20.10.5432: Flags [.], ack 1, win 502, options [nop,nop,TS val 2135592836 ecr 256316202], length 0
+2026-10-30 07:48:36.497853 eth0  In  IP 172.28.20.60.44104 > 172.28.20.10.5432: Flags [F.], seq 1, ack 1, win 502, options [nop,nop,TS val 2135592836 ecr 256316202], length 0
+2026-10-30 07:48:36.503617 eth0  Out IP 172.28.20.10.5432 > 172.28.20.60.44104: Flags [.], ack 2, win 510, options [nop,nop,TS val 256316208 ecr 2135592836], length 0
+2026-10-30 07:48:36.504644 eth0  Out IP 172.28.20.10.5432 > 172.28.20.60.44104: Flags [F.], seq 1, ack 2, win 510, options [nop,nop,TS val 256316209 ecr 2135592836], length 0
+2026-10-30 07:48:36.504694 eth0  In  IP 172.28.20.60.44104 > 172.28.20.10.5432: Flags [.], ack 2, win 502, options [nop,nop,TS val 2135592843 ecr 256316209], length 0
+2026-10-30 07:48:38.146988 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [S], seq 2359337824, win 64240, options [mss 1460,sackOK,TS val 1916968485 ecr 0,nop,wscale 7], length 0
+2026-10-30 07:48:38.147026 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.60994: Flags [S.], seq 1277500759, ack 2359337825, win 65160, options [mss 1460,sackOK,TS val 913543803 ecr 1916968485,nop,wscale 7], length 0
+2026-10-30 07:48:38.147159 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [.], ack 1, win 502, options [nop,nop,TS val 1916968485 ecr 913543803], length 0
+2026-10-30 07:48:38.148044 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.60994: Flags [.], ack 9, win 509, options [nop,nop,TS val 913543804 ecr 1916968486], length 0
+2026-10-30 07:48:38.149860 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [.], ack 2, win 502, options [nop,nop,TS val 1916968488 ecr 913543806], length 0
+2026-10-30 07:48:38.207705 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [.], ack 1301, win 501, options [nop,nop,TS val 1916968546 ecr 913543822], length 0
+2026-10-30 07:48:38.338787 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [F.], seq 568, ack 1301, win 501, options [nop,nop,TS val 1916968677 ecr 913543822], length 0
+2026-10-30 07:48:38.343680 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [F.], seq 568, ack 1301, win 501, options [nop,nop,TS val 1916968682 ecr 913543822], length 0
+2026-10-30 07:48:38.343808 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.60994: Flags [.], ack 569, win 509, options [nop,nop,TS val 913544000 ecr 1916968677,nop,nop,sack 1 {568:569}], length 0
+2026-10-30 07:48:38.343921 eth0  Out IP 172.28.20.10.5432 > 172.28.20.11.60994: Flags [F.], seq 1301, ack 569, win 509, options [nop,nop,TS val 913544000 ecr 1916968677], length 0
+2026-10-30 07:48:38.343978 eth0  In  IP 172.28.20.11.60994 > 172.28.20.10.5432: Flags [.], ack 1302, win 501, options [nop,nop,TS val 1916968682 ecr 913544000], length 0
+2026-10-30 07:48:38.841202 eth0  In  IP 172.28.20.60.42704 > 172.28.20.10.5353: 29816 update+% [b2&3=0x2d75] [11632a] [25712q] [29295n] [25189au] [|domain]
+2026-10-30 07:48:38.845703 eth0  Out IP 172.28.20.10.5353 > 172.28.20.60.42704: 29816 update+% [b2&3=0x2d75] [11632a] [25712q] [29295n] [25189au] [|domain]
+2026-10-30 07:48:47.216804 eth0  In  IP 172.28.20.99.44386 > 172.28.20.10.5432: Flags [S], seq 3135385579, win 64240, options [mss 1460,sackOK,TS val 1517714352 ecr 0,nop,wscale 7], length 0
+2026-10-30 07:48:48.232345 eth0  In  IP 172.28.20.99.44386 > 172.28.20.10.5432: Flags [S], seq 3135385579, win 64240, options [mss 1460,sackOK,TS val 1517715368 ecr 0,nop,wscale 7], length 0
+2026-10-30 07:48:49.256363 eth0  In  IP 172.28.20.99.44386 > 172.28.20.10.5432: Flags [S], seq 3135385579, win 64240, options [mss 1460,sackOK,TS val 1517716392 ecr 0,nop,wscale 7], length 0
+2026-10-30 07:48:50.697230 eth0  In  IP 172.28.20.99.35702 > 172.28.20.10.5353: 25701 updateMA [b2&3=0x6e69] [11637a] [25956q] [25712n] [11632au] [|domain]
 Exit: 0
 

@@ -2,8 +2,9 @@
 
 Repository: https://github.com/Latishaaa-29/tesselonix-security-network-assessment
 
-Candidate name: fill in the exact name required by the assessment portal.
-Do not infer a candidate name from the machine user or GitHub account.
+Candidate: **Latisha Saxena**  
+Enrollment number: **02617711623**  
+Role: **Cybersecurity and Computer Networking**
 
 Ready-to-review deliverables:
 
@@ -13,6 +14,7 @@ Ready-to-review deliverables:
 - `reports/03-verification.md`: reproduction and before/after mapping.
 - `reports/04-reflection.md`: engineering reflection and required candidate review.
 - `reports/05-walkthrough.md`: explanation and live-demo rehearsal.
+- `reports/06-requirements-check.md`: mapping to the assignment and submission email.
 - `reports/network-diagram.svg`: topology.
 - `reports/assessment-report.pdf`: printable combined reports.
 - `fixes/security-hardening.diff`: app patch.
@@ -31,9 +33,13 @@ python scripts/build.py
 python scripts/verify.py
 ```
 
-Before sending to the assessment team, fill in your candidate name in the portal,
-review the AI disclosure, personally run and understand the walkthrough, and ensure
-the evaluator can access the repository (invite them if it remains private) or
-submit the ZIP. A GitHub repository link is not itself an email/portal submission.
-No assessor email or portal destination has been supplied, so this package is
-prepared for you to submit; nothing has been sent to an assessor.
+Submit by **Reply All to the original assignment email thread**, retaining the
+placement office and all original recipients. Keep the existing email subject.
+The deadline is within **3 calendar days of receiving that email**; check its
+actual received date rather than calculating from the date of this report.
+
+Include the repository link and attach the PDF report and complete ZIP. The
+repository is private, so the ZIP provides the full source and evidence without
+requiring GitHub access; invite the evaluator if repository browsing is required.
+Review the AI disclosure and personally run and understand the walkthrough.
+The package is prepared for submission; no email has been sent by the assistant.

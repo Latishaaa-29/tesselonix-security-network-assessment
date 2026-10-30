@@ -105,6 +105,7 @@ proves a firewall denial from a directly connected source.
 - [Before/after verification](reports/03-verification.md)
 - [Technical reflection](reports/04-reflection.md)
 - [Walkthrough and explanation](reports/05-walkthrough.md)
+- [Assignment requirements cross-check](reports/06-requirements-check.md)
 - [Submission checklist](SUBMISSION.md)
 - `fixes/security-hardening.diff`: exact application changes from baseline
 - `evidence/app/`, `evidence/network/`: actual redacted transcripts and packet capture

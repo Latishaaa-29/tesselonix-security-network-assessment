@@ -2,7 +2,5 @@
   "phase": "all",
   "result": "PASS",
   "application_left_running": true,
-  "captured_utc": "2026-10-30T04:36:59.215960+00:00",
-  "clean_clone_verified": true,
-  "source_commit_exercised": "9311b29"
+  "captured_utc": "2026-10-30T07:49:22.684228+00:00"
 }

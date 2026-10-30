@@ -15,6 +15,7 @@ styles['BodyText'].fontSize = 9
 styles['BodyText'].leading = 13
 story = [Paragraph('Tesselonix Assessment', styles['Title']),
          Paragraph('Application Security Audit &amp; Network Troubleshooting', styles['Heading2']),
+         Paragraph('Candidate: Latisha Saxena | Enrollment: 02617711623', styles['BodyText']),
          Paragraph('Target: Microblog a975ef64864354867c88e0ed3a17ba7d17dca752', styles['BodyText']),
          Paragraph('Prepared 30 October 2026. AI assistance disclosed in TOOLS_AND_AI.md. '
                    'Raw evidence and executable source are in the accompanying repository.', styles['BodyText']),

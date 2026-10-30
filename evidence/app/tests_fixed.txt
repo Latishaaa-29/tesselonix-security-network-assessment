@@ -1,5 +1,5 @@
-Captured UTC: 2026-10-30T04:35:27.033824+00:00
+Captured UTC: 2026-10-30T07:47:52.536282+00:00
 Command: docker run --rm tx-microblog:fixed pytest -q tests.py test_security.py
 ...............                                                          [100%]
-15 passed in 6.28s
+15 passed in 6.00s
 

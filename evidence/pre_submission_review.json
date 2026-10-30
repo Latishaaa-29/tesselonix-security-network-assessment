@@ -1,0 +1,19 @@
+{
+  "reviewed_utc": "2026-10-30T07:50:38.493995+00:00",
+  "candidate": "Latisha Saxena",
+  "enrollment": "02617711623",
+  "basis": "Provided assignment PDF and HR submission email",
+  "full_live_verifier": "PASS",
+  "tests_passed": {
+    "baseline": 4,
+    "fixed": 15
+  },
+  "browser_and_api_smoke": "PASS",
+  "requirements_mapping": "reports/06-requirements-check.md",
+  "limitations": [
+    "No dedicated-router forwarding demonstration",
+    "Lab-only in-memory throttling",
+    "Candidate must personally understand and demonstrate the work"
+  ],
+  "email_sent": false
+}
