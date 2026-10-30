@@ -3,3 +3,7 @@
 *.py text eol=lf
 *.yml text eol=lf
 *.pcap binary
+*.pdf binary
+*.png binary
+*.zip binary
+*.bundle binary
