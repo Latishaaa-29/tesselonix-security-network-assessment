@@ -29,7 +29,7 @@ Commands below run in PowerShell from the repository root. No host Python packag
 are needed to build, run or verify the lab.
 
 ```powershell
-git clone https://github.com/devashishsaxen/tesselonix-security-network-assessment.git
+git clone https://github.com/Latishaaa-29/tesselonix-security-network-assessment.git
 cd tesselonix-security-network-assessment
 python scripts/setup.py
 python scripts/build.py

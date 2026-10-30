@@ -1,6 +1,6 @@
 # Submission package
 
-Repository: https://github.com/devashishsaxen/tesselonix-security-network-assessment
+Repository: https://github.com/Latishaaa-29/tesselonix-security-network-assessment
 
 Candidate name: fill in the exact name required by the assessment portal.
 Do not infer a candidate name from the machine user or GitHub account.

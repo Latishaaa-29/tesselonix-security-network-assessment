@@ -18,7 +18,7 @@ story = [Paragraph('Tesselonix Assessment', styles['Title']),
          Paragraph('Target: Microblog a975ef64864354867c88e0ed3a17ba7d17dca752', styles['BodyText']),
          Paragraph('Prepared 30 October 2026. AI assistance disclosed in TOOLS_AND_AI.md. '
                    'Raw evidence and executable source are in the accompanying repository.', styles['BodyText']),
-         Paragraph('Repository: https://github.com/devashishsaxen/tesselonix-security-network-assessment', styles['BodyText'])]
+         Paragraph('Repository: https://github.com/Latishaaa-29/tesselonix-security-network-assessment', styles['BodyText'])]
 
 for path in [root / 'TOOLS_AND_AI.md'] + sorted((root / 'reports').glob('0*.md')):
     story.append(PageBreak())
