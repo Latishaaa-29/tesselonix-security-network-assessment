@@ -1,0 +1,56 @@
+name: tx-net
+services:
+  app:
+    image: tx-microblog:fixed
+    ports: ["127.0.0.1:5000:5000"]
+    environment:
+      DATABASE_URL: postgresql://microblog:${DB_PASSWORD:?Run setup}@db/microblog
+      SECRET_KEY: ${SECRET_KEY:?Run setup}
+      LOG_TO_STDOUT: "1"
+    depends_on:
+      db: {condition: service_healthy}
+    sysctls: {net.ipv4.ip_forward: "0"}
+    networks:
+      edge_net: {ipv4_address: 172.28.10.10}
+      int_net: {ipv4_address: 172.28.20.11}
+  db:
+    image: tx-db:lab
+    cap_add: [NET_ADMIN, NET_RAW]
+    environment:
+      POSTGRES_USER: microblog
+      POSTGRES_DB: microblog
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Run setup}
+      FW_MODE: secure
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U microblog -d microblog"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    volumes: ["net_data:/var/lib/postgresql/data"]
+    networks:
+      int_net: {ipv4_address: 172.28.20.10}
+  netops:
+    image: tx-tools:lab
+    cap_add: [NET_RAW, NET_ADMIN]
+    sysctls: {net.ipv4.ip_forward: "0"}
+    networks:
+      edge_net: {ipv4_address: 172.28.10.60}
+      int_net: {ipv4_address: 172.28.20.60}
+  client:
+    image: tx-tools:lab
+    networks:
+      edge_net: {ipv4_address: 172.28.10.50}
+  rogue:
+    image: tx-tools:lab
+    networks:
+      int_net: {ipv4_address: 172.28.20.99}
+networks:
+  edge_net:
+    ipam:
+      config: [{subnet: 172.28.10.0/24, gateway: 172.28.10.1}]
+  int_net:
+    internal: true
+    ipam:
+      config: [{subnet: 172.28.20.0/24, gateway: 172.28.20.1}]
+volumes:
+  net_data: {}

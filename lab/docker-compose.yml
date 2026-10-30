@@ -1,0 +1,29 @@
+name: tx-app
+services:
+  app:
+    image: tx-microblog:${TX_TAG:-fixed}
+    ports: ["127.0.0.1:5000:5000"]
+    environment:
+      DATABASE_URL: postgresql://microblog:${DB_PASSWORD:?Run python scripts/setup.py first}@db/microblog
+      SECRET_KEY: ${SECRET_KEY:-}
+      LOG_TO_STDOUT: "1"
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [app_net]
+  db:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_USER: microblog
+      POSTGRES_DB: microblog
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Run python scripts/setup.py first}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U microblog -d microblog"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    volumes: ["app_data:/var/lib/postgresql/data"]
+    networks: [app_net]
+networks:
+  app_net: {}
+volumes:
+  app_data: {}

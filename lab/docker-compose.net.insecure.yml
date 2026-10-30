@@ -1,0 +1,7 @@
+# Controlled local misconfiguration; never expose to the LAN.
+# Apply together with docker-compose.net.yml.
+services:
+  db:
+    environment:
+      FW_MODE: insecure
+    ports: ["127.0.0.1:5432:5432"]

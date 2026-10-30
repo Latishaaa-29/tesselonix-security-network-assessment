@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.db
+*.log
+dist/
+.build/
+app/microblog/.env
+app/microblog/logs/
+app/microblog/.pytest_cache/

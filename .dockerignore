@@ -1,0 +1,9 @@
+.git
+.env
+.build
+dist
+evidence
+app/microblog/.git
+app/microblog/.env
+**/__pycache__
+**/logs
